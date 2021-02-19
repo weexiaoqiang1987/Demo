@@ -32,12 +32,12 @@
     ViewControllerTwo *rootvc = (ViewControllerTwo *)[toVc topViewController];
     ViewControllerOne *fromRootVc = (ViewControllerOne *)[fromVc topViewController];
 
-//    UIView *fromView = fromVc.view; //[transitionContext viewForKey:UITransitionContextFromViewKey];
+    UIView *fromView = fromVc.view; //[transitionContext viewForKey:UITransitionContextFromViewKey];
     UIView *toView = toVc.view;//[transitionContext viewForKey:UITransitionContextToViewKey];
     CGRect formRect = [fromRootVc.view convertRect:fromRootVc.pushbtn.frame toView:containView];
 
     UIView *view = [[UIView alloc] initWithFrame:formRect];
-    view.backgroundColor = UIColor.redColor;
+    view.backgroundColor = fromRootVc.pushbtn.backgroundColor;
 
     [containView addSubview:toView];
     [containView addSubview:view];
@@ -48,8 +48,9 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         //回调或者说是通知主线程刷新，
         CGRect toRect = [toView convertRect:rootvc.searchView.frame toView:containView];
-        [UIView animateWithDuration:0.35 animations:^{
+        [UIView animateWithDuration:ktrannsitionDuration animations:^{
             view.frame = toRect;
+            view.backgroundColor = rootvc.searchView.backgroundColor;
             toView.alpha = 1;
         } completion:^(BOOL finished) {
             [view removeFromSuperview];
