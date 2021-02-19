@@ -19,6 +19,8 @@
 		84B6FDF32589DFAE00E6C799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B6FDF12589DFAE00E6C799 /* LaunchScreen.storyboard */; };
 		84B6FDF62589DFAE00E6C799 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B6FDF52589DFAE00E6C799 /* main.m */; };
 		84D3974125DF5D94009C3CAF /* ViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3974025DF5D94009C3CAF /* ViewControllerOne.m */; };
+		84D3974D25DF9377009C3CAF /* TLHomeSearchPopAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3974C25DF9377009C3CAF /* TLHomeSearchPopAnimate.m */; };
+		84D3975325DFA0E3009C3CAF /* UIApplication+Visible.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3975225DFA0E3009C3CAF /* UIApplication+Visible.m */; };
 		84E4F57225CC00DB00944AFA /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4F57125CC00DB00944AFA /* ViewControllerTwo.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,10 @@
 		84B6FDF52589DFAE00E6C799 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84D3973F25DF5D94009C3CAF /* ViewControllerOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerOne.h; sourceTree = "<group>"; };
 		84D3974025DF5D94009C3CAF /* ViewControllerOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerOne.m; sourceTree = "<group>"; };
+		84D3974B25DF9377009C3CAF /* TLHomeSearchPopAnimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLHomeSearchPopAnimate.h; sourceTree = "<group>"; };
+		84D3974C25DF9377009C3CAF /* TLHomeSearchPopAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeSearchPopAnimate.m; sourceTree = "<group>"; };
+		84D3975125DFA0E3009C3CAF /* UIApplication+Visible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Visible.h"; sourceTree = "<group>"; };
+		84D3975225DFA0E3009C3CAF /* UIApplication+Visible.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Visible.m"; sourceTree = "<group>"; };
 		84E4F57025CC00DB00944AFA /* ViewControllerTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerTwo.h; sourceTree = "<group>"; };
 		84E4F57125CC00DB00944AFA /* ViewControllerTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTwo.m; sourceTree = "<group>"; };
 		E48B7712156600CD6345D02D /* Pods-webviewtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-webviewtest.debug.xcconfig"; path = "Target Support Files/Pods-webviewtest/Pods-webviewtest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 			children = (
 				8472BAAE25DE6C6F00301504 /* UIView+SetRect.h */,
 				8472BAAF25DE6C6F00301504 /* UIView+SetRect.m */,
+				84D3975125DFA0E3009C3CAF /* UIApplication+Visible.h */,
+				84D3975225DFA0E3009C3CAF /* UIApplication+Visible.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -74,6 +82,8 @@
 		8472BAB325DE7B0C00301504 /* transition */ = {
 			isa = PBXGroup;
 			children = (
+				84D3974B25DF9377009C3CAF /* TLHomeSearchPopAnimate.h */,
+				84D3974C25DF9377009C3CAF /* TLHomeSearchPopAnimate.m */,
 				8472BA9E25DE0AD900301504 /* TLHOmeSearchPushAnimate.h */,
 				8472BA9F25DE0AD900301504 /* TLHOmeSearchPushAnimate.m */,
 				84D3973F25DF5D94009C3CAF /* ViewControllerOne.h */,
@@ -238,6 +248,8 @@
 			files = (
 				84D3974125DF5D94009C3CAF /* ViewControllerOne.m in Sources */,
 				8472BAA025DE0AD900301504 /* TLHOmeSearchPushAnimate.m in Sources */,
+				84D3974D25DF9377009C3CAF /* TLHomeSearchPopAnimate.m in Sources */,
+				84D3975325DFA0E3009C3CAF /* UIApplication+Visible.m in Sources */,
 				8472BAB025DE6C6F00301504 /* UIView+SetRect.m in Sources */,
 				84E4F57225CC00DB00944AFA /* ViewControllerTwo.m in Sources */,
 				84B6FDEB2589DFAD00E6C799 /* ViewController.m in Sources */,

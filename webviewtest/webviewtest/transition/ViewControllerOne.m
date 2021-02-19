@@ -8,9 +8,10 @@
 #import "ViewControllerOne.h"
 #import "ViewControllerTwo.h"
 #import "TLHOmeSearchPushAnimate.h"
+#import "TLHomeSearchPopAnimate.h"
 #import "UIView+SetRect.h"
 
-@interface ViewControllerOne ()<UINavigationControllerDelegate, UIViewControllerTransitioningDelegate>
+@interface ViewControllerOne ()<UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -30,14 +31,13 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    self.navigationController.delegate = self;
 }
 
 - (void)pushVcTwo{
     ViewControllerTwo *vc = [[ViewControllerTwo alloc] init];
     UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
     navc.transitioningDelegate = self;
-    navc.modalPresentationStyle = UIModalPresentationOverFullScreen;
+    navc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:navc animated:YES completion:nil];
 }
 
@@ -45,22 +45,12 @@
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     
+    
     return [TLHOmeSearchPushAnimate new];
 }
 
-#pragma mark - UINavigationControllerDelegate
-
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                  animationControllerForOperation:(UINavigationControllerOperation)operation
-                                               fromViewController:(UIViewController *)fromVC
-                                                 toViewController:(UIViewController *)toVC
-{
-    
-    
-    if (operation == UINavigationControllerOperationPush) {
-        return [TLHOmeSearchPushAnimate new];
-    } else {
-        return nil;
-    }
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    return [TLHomeSearchPopAnimate new];
 }
+
 @end

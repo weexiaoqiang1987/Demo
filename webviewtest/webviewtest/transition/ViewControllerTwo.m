@@ -5,9 +5,11 @@
 //  Created by admin on 2021/2/4.
 //
 
+#import "ViewControllerOne.h"
 #import "ViewControllerTwo.h"
 #import "ViewControllerThree.h"
 #import "UIView+SetRect.h"
+#import "UIApplication+Visible.h"
 
 @interface ViewControllerTwo ()
 @end
@@ -75,7 +77,8 @@
 }
 
 - (void)dismiss{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark --- UIKeyboardWillChangeFrameNotification
