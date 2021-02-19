@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		777CEAA3DCBA057960486A56 /* libPods-webviewtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D978421AE47A8066D8B2F8 /* libPods-webviewtest.a */; };
-		8472BAA025DE0AD900301504 /* TLHOmeSearchPushAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472BA9F25DE0AD900301504 /* TLHOmeSearchPushAnimate.m */; };
+		8472BAA025DE0AD900301504 /* PushAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472BA9F25DE0AD900301504 /* PushAnimate.m */; };
 		8472BAAB25DE673D00301504 /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472BAAA25DE673D00301504 /* ViewControllerThree.m */; };
 		8472BAB025DE6C6F00301504 /* UIView+SetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8472BAAF25DE6C6F00301504 /* UIView+SetRect.m */; };
 		84B6FDE52589DFAD00E6C799 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B6FDE42589DFAD00E6C799 /* AppDelegate.m */; };
@@ -19,15 +19,15 @@
 		84B6FDF32589DFAE00E6C799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B6FDF12589DFAE00E6C799 /* LaunchScreen.storyboard */; };
 		84B6FDF62589DFAE00E6C799 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B6FDF52589DFAE00E6C799 /* main.m */; };
 		84D3974125DF5D94009C3CAF /* ViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3974025DF5D94009C3CAF /* ViewControllerOne.m */; };
-		84D3974D25DF9377009C3CAF /* TLHomeSearchPopAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3974C25DF9377009C3CAF /* TLHomeSearchPopAnimate.m */; };
+		84D3974D25DF9377009C3CAF /* PopAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3974C25DF9377009C3CAF /* PopAnimate.m */; };
 		84D3975325DFA0E3009C3CAF /* UIApplication+Visible.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3975225DFA0E3009C3CAF /* UIApplication+Visible.m */; };
 		84E4F57225CC00DB00944AFA /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4F57125CC00DB00944AFA /* ViewControllerTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27D978421AE47A8066D8B2F8 /* libPods-webviewtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-webviewtest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8472BA9E25DE0AD900301504 /* TLHOmeSearchPushAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLHOmeSearchPushAnimate.h; sourceTree = "<group>"; };
-		8472BA9F25DE0AD900301504 /* TLHOmeSearchPushAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLHOmeSearchPushAnimate.m; sourceTree = "<group>"; };
+		8472BA9E25DE0AD900301504 /* PushAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimate.h; sourceTree = "<group>"; };
+		8472BA9F25DE0AD900301504 /* PushAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimate.m; sourceTree = "<group>"; };
 		8472BAA925DE673D00301504 /* ViewControllerThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerThree.h; sourceTree = "<group>"; };
 		8472BAAA25DE673D00301504 /* ViewControllerThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerThree.m; sourceTree = "<group>"; };
 		8472BAAE25DE6C6F00301504 /* UIView+SetRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SetRect.h"; sourceTree = "<group>"; };
@@ -46,8 +46,8 @@
 		84B6FDF52589DFAE00E6C799 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84D3973F25DF5D94009C3CAF /* ViewControllerOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerOne.h; sourceTree = "<group>"; };
 		84D3974025DF5D94009C3CAF /* ViewControllerOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerOne.m; sourceTree = "<group>"; };
-		84D3974B25DF9377009C3CAF /* TLHomeSearchPopAnimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLHomeSearchPopAnimate.h; sourceTree = "<group>"; };
-		84D3974C25DF9377009C3CAF /* TLHomeSearchPopAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeSearchPopAnimate.m; sourceTree = "<group>"; };
+		84D3974B25DF9377009C3CAF /* PopAnimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopAnimate.h; sourceTree = "<group>"; };
+		84D3974C25DF9377009C3CAF /* PopAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopAnimate.m; sourceTree = "<group>"; };
 		84D3975125DFA0E3009C3CAF /* UIApplication+Visible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Visible.h"; sourceTree = "<group>"; };
 		84D3975225DFA0E3009C3CAF /* UIApplication+Visible.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Visible.m"; sourceTree = "<group>"; };
 		84E4F57025CC00DB00944AFA /* ViewControllerTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerTwo.h; sourceTree = "<group>"; };
@@ -82,10 +82,10 @@
 		8472BAB325DE7B0C00301504 /* transition */ = {
 			isa = PBXGroup;
 			children = (
-				84D3974B25DF9377009C3CAF /* TLHomeSearchPopAnimate.h */,
-				84D3974C25DF9377009C3CAF /* TLHomeSearchPopAnimate.m */,
-				8472BA9E25DE0AD900301504 /* TLHOmeSearchPushAnimate.h */,
-				8472BA9F25DE0AD900301504 /* TLHOmeSearchPushAnimate.m */,
+				84D3974B25DF9377009C3CAF /* PopAnimate.h */,
+				84D3974C25DF9377009C3CAF /* PopAnimate.m */,
+				8472BA9E25DE0AD900301504 /* PushAnimate.h */,
+				8472BA9F25DE0AD900301504 /* PushAnimate.m */,
 				84D3973F25DF5D94009C3CAF /* ViewControllerOne.h */,
 				84D3974025DF5D94009C3CAF /* ViewControllerOne.m */,
 				84E4F57025CC00DB00944AFA /* ViewControllerTwo.h */,
@@ -247,8 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D3974125DF5D94009C3CAF /* ViewControllerOne.m in Sources */,
-				8472BAA025DE0AD900301504 /* TLHOmeSearchPushAnimate.m in Sources */,
-				84D3974D25DF9377009C3CAF /* TLHomeSearchPopAnimate.m in Sources */,
+				8472BAA025DE0AD900301504 /* PushAnimate.m in Sources */,
+				84D3974D25DF9377009C3CAF /* PopAnimate.m in Sources */,
 				84D3975325DFA0E3009C3CAF /* UIApplication+Visible.m in Sources */,
 				8472BAB025DE6C6F00301504 /* UIView+SetRect.m in Sources */,
 				84E4F57225CC00DB00944AFA /* ViewControllerTwo.m in Sources */,
@@ -400,8 +400,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J95TZS3RLX;
 				INFOPLIST_FILE = webviewtest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -409,9 +409,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tl.browsersimple;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tl.browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = 456;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -422,8 +422,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J95TZS3RLX;
 				INFOPLIST_FILE = webviewtest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -431,9 +431,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tl.browsersimple;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tl.browser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = 456;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

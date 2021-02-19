@@ -6,18 +6,18 @@
 //  Copyright © 2021 admin. All rights reserved.
 //
 
-#import "TLHOmeSearchPushAnimate.h"
+#import "PushAnimate.h"
 #import "ViewControllerTwo.h"
 #import "ViewControllerOne.h"
 #import "UIView+SetRect.h"
 
 #define ktrannsitionDuration 0.35
 
-@interface TLHOmeSearchPushAnimate ()
+@interface PushAnimate ()
 
 @end
 
-@implementation TLHOmeSearchPushAnimate
+@implementation PushAnimate
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return ktrannsitionDuration;
@@ -44,8 +44,10 @@
 
     rootvc.searchView.alpha = 0;
     toView.alpha = 0;
-
-    dispatch_async(dispatch_get_main_queue(), ^{
+    
+    // 如果不是系统键盘 获取rect需要有一定的延时
+    float time = [self isSystemKeyboard] ? 0 : 0.25;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //回调或者说是通知主线程刷新，
         CGRect toRect = [toView convertRect:rootvc.searchView.frame toView:containView];
         [UIView animateWithDuration:ktrannsitionDuration animations:^{
@@ -58,6 +60,17 @@
             [transitionContext completeTransition:YES];
         }];
     });
+}
+
+- (BOOL)isSystemKeyboard {
+    NSString *currentKeyboardName = [[[[UITextInputMode activeInputModes] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"isDisplayed = YES"]] lastObject] valueForKey:@"extendedDisplayName"];
+    if ([currentKeyboardName isEqualToString:@"简体拼音"] || [currentKeyboardName isEqualToString:@"表情符号"] || [currentKeyboardName isEqualToString:@"English (US)"]) {
+        //系统自带键盘
+        return YES;
+    } else {
+        //第三方键盘
+        return NO;
+    }
 }
 
 @end

@@ -5,14 +5,14 @@
 //  Created by admin on 2021/2/19.
 //
 
-#import "TLHomeSearchPopAnimate.h"
+#import "PopAnimate.h"
 #import "ViewControllerTwo.h"
 #import "ViewControllerOne.h"
 #import "UIView+SetRect.h"
 
 #define ktrannsitionDuration 0.35
 
-@implementation TLHomeSearchPopAnimate
+@implementation PopAnimate
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return ktrannsitionDuration;

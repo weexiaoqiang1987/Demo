@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLHOmeSearchPushAnimate : NSObject<UIViewControllerAnimatedTransitioning>
+@interface PushAnimate : NSObject<UIViewControllerAnimatedTransitioning>
 
 @end
 

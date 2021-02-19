@@ -7,8 +7,8 @@
 
 #import "ViewControllerOne.h"
 #import "ViewControllerTwo.h"
-#import "TLHOmeSearchPushAnimate.h"
-#import "TLHomeSearchPopAnimate.h"
+#import "PushAnimate.h"
+#import "PopAnimate.h"
 #import "UIView+SetRect.h"
 
 @interface ViewControllerOne ()<UIViewControllerTransitioningDelegate>
@@ -36,21 +36,21 @@
 - (void)pushVcTwo{
     ViewControllerTwo *vc = [[ViewControllerTwo alloc] init];
     UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
-    navc.transitioningDelegate = self;
+//    navc.transitioningDelegate = self;
     navc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:navc animated:YES completion:nil];
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
+// present动画
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
-    
-    
-    return [TLHOmeSearchPushAnimate new];
+    return [PushAnimate new];
 }
 
+// dismiss动画
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
-    return [TLHomeSearchPopAnimate new];
+    return [PopAnimate new];
 }
 
 @end

@@ -18,37 +18,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self addNotification];
     self.title = @"第二个控制器";
     self.view.backgroundColor = kRandomColor;
-    
+
     UIButton *dismiss = [[UIButton alloc] initWithFrame:CGRectMake(80, 150, 100, 40)];
     [dismiss setTitle:@"dismiss" forState:UIControlStateNormal];
     dismiss.backgroundColor = kRandomColor;
-    [dismiss addTarget:self
-                action:@selector(dismiss)
-      forControlEvents:UIControlEventTouchUpInside];
+    [dismiss   addTarget:self
+                  action:@selector(dismiss)
+        forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:dismiss];
-    
+
     UIButton *pushbtn = [[UIButton alloc] initWithFrame:CGRectMake(230, 150, 100, 40)];
     [pushbtn setTitle:@"pushVC" forState:UIControlStateNormal];
     pushbtn.backgroundColor = kRandomColor;
-    [pushbtn addTarget:self
-                action:@selector(pushVC)
-      forControlEvents:UIControlEventTouchUpInside];
+    [pushbtn   addTarget:self
+                  action:@selector(pushVC)
+        forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pushbtn];
-     
+
     UIView *input = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Width, 40)];
     input.backgroundColor = kRandomColor;
-    
-    self.textField= [[UITextField alloc] initWithFrame:CGRectMake(140, 250, 100, 40)];
+
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(140, 250, 100, 40)];
     self.textField.backgroundColor = kRandomColor;
     [self.textField becomeFirstResponder];
     self.textField.inputAccessoryView = input;
     [self.view addSubview:self.textField];
-    
-    self.searchView = [[UIView alloc] initWithFrame:CGRectMake(0, Height-60, Width, 60)];
+
+    self.searchView = [[UIView alloc] initWithFrame:CGRectMake(0, Height - 60, Width, 60)];
     self.searchView.backgroundColor = kRandomColor;
     [self.view addSubview:self.searchView];
 }
@@ -66,27 +66,26 @@
                                                   object:nil];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:YES];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController.navigationBar setHidden:NO];
 }
 
-- (void)dismiss{
-    
+- (void)dismiss {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark --- UIKeyboardWillChangeFrameNotification
 
 - (void)keyboardWillChangeFrameNotify:(NSNotification *)noti {
-    NSDictionary *dict =  noti.userInfo;
-    CGRect KeyboardFrame =  [dict[UIKeyboardFrameEndUserInfoKey]CGRectValue];
-    CGFloat KeyboardY =  KeyboardFrame.origin.y;
+    NSDictionary *dict = noti.userInfo;
+    CGRect KeyboardFrame = [dict[UIKeyboardFrameEndUserInfoKey]CGRectValue];
+    CGFloat KeyboardY = KeyboardFrame.origin.y;
     NSTimeInterval timeInterval = [dict[UIKeyboardAnimationDurationUserInfoKey] doubleValue];//动画持续时间
     UIViewAnimationCurve curve = [dict[UIKeyboardAnimationCurveUserInfoKey] integerValue];//动画曲线类型
 
@@ -96,10 +95,12 @@
     }];
 }
 
-- (void)pushVC{
+- (void)pushVC {
     ViewControllerThree *vc = [[ViewControllerThree alloc] init];
     vc.view.backgroundColor = UIColor.blueColor;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+
 
 @end
