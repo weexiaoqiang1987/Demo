@@ -29,14 +29,10 @@
     [self.view addSubview:self.pushbtn];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-}
-
 - (void)pushVcTwo{
     ViewControllerTwo *vc = [[ViewControllerTwo alloc] init];
     UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
-//    navc.transitioningDelegate = self;
+    navc.transitioningDelegate = self;
     navc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:navc animated:YES completion:nil];
 }

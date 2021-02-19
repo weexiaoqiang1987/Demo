@@ -12,6 +12,7 @@
 #import "UIApplication+Visible.h"
 
 @interface ViewControllerTwo ()
+@property (nonatomic, assign) float keyboardTimes;
 @end
 
 @implementation ViewControllerTwo

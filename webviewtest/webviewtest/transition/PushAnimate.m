@@ -10,6 +10,7 @@
 #import "ViewControllerTwo.h"
 #import "ViewControllerOne.h"
 #import "UIView+SetRect.h"
+#import "AppDelegate.h"
 
 #define ktrannsitionDuration 0.35
 
@@ -45,8 +46,11 @@
     rootvc.searchView.alpha = 0;
     toView.alpha = 0;
     
-    // 如果不是系统键盘 获取rect需要有一定的延时
-    float time = [self isSystemKeyboard] ? 0 : 0.25;
+    // 如果不是系统键盘，第一次启动输入法会有三次通知，位置不准确
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    float keyboard = appDelegate.keyboardTimes;
+    
+    float time = ![self isSystemKeyboard] && keyboard == 0  ? 0.25  : 0;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //回调或者说是通知主线程刷新，
         CGRect toRect = [toView convertRect:rootvc.searchView.frame toView:containView];

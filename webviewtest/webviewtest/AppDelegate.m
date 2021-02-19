@@ -17,9 +17,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.keyboardTimes = 0;
+    [[NSNotificationCenter  defaultCenter] addObserver:self
+                                              selector:@selector(keyboardWillChangeFrameNotify:)
+                                                  name:UIKeyboardWillShowNotification
+                                                object:nil];
     return YES;
 }
 
+#pragma mark --- UIKeyboardWillChangeFrameNotification
+
+- (void)keyboardWillChangeFrameNotify:(NSNotification *)noti {
+    if ([self isSystemKeyboard]) {
+        return;
+    }
+    self.keyboardTimes++;
+}
+
+- (BOOL)isSystemKeyboard {
+    NSString *currentKeyboardName = [[[[UITextInputMode activeInputModes] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"isDisplayed = YES"]] lastObject] valueForKey:@"extendedDisplayName"];
+    if ([currentKeyboardName isEqualToString:@"简体拼音"] || [currentKeyboardName isEqualToString:@"表情符号"] || [currentKeyboardName isEqualToString:@"English (US)"]) {
+        //系统自带键盘
+        return YES;
+    } else {
+        //第三方键盘
+        return NO;
+    }
+}
 
 #pragma mark - UISceneSession lifecycle
 
