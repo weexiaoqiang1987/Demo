@@ -28,6 +28,7 @@
 #pragma mark --- UIKeyboardWillChangeFrameNotification
 
 - (void)keyboardWillChangeFrameNotify:(NSNotification *)noti {
+    NSLog(@"1111");
     if ([self isSystemKeyboard]) {
         return;
     }

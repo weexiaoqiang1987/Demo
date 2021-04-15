@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-webviewtest/Pods-webviewtest-resources.sh
+${PODS_ROOT}/GVRSDK/Resources/CardboardSDK.bundle
+${PODS_ROOT}/GVRSDK/Resources/GoogleKitCore.bundle
+${PODS_ROOT}/GVRSDK/Resources/GoogleKitDialogs.bundle
+${PODS_ROOT}/GVRSDK/Resources/GoogleKitDialogsArrows.bundle
+${PODS_ROOT}/GVRSDK/Resources/GoogleKitDialogsStrings.bundle
+${PODS_ROOT}/GVRSDK/Resources/GoogleKitHUD.bundle
+${PODS_ROOT}/GVRSDK/Resources/MaterialRobotoFontLoader.bundle

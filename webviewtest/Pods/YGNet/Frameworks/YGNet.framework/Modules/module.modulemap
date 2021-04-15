@@ -1,0 +1,6 @@
+framework module YGNet {
+  umbrella header "YGNet.h"
+
+  export *
+  module * { export * }
+}

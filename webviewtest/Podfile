@@ -1,9 +1,12 @@
 # Uncomment the next line to define a global platform for your project
  platform :ios, '10.0'
 source 'https://github.com/aliyun/aliyun-specs.git'
+source 'https://cdn.cocoapods.org/'
 #source 'https://github.com/CocoaPods/specs.git'
 source 'https://cdn.cocoapods.org/'
 
 target 'webviewtest' do
   pod 'Masonry'
+  pod 'KSAdSDK', '3.3.7'
+  pod 'YGNet', '0.0.3'
 end
