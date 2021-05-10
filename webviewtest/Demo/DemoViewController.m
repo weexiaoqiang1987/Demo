@@ -5,32 +5,28 @@
 //  Created by admin on 2021/4/7.
 //
 
-#import "ViewController.h"
+#import "DemoViewController.h"
 #import "TLDeviceInfo.h"
 #import "MJExtension.h"
+static const char *SIDFAModel = "hw.model";
 
 UIView *test(void);
 
-@interface ViewController ()
+@interface DemoViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.whiteColor;
+}
 
-    NSString *code = @"@";
-    if (code == NO) {
-        NSLog(@"1");
-    }else{
-        NSLog(@"2");
-    }
-    
+- (void)addTestView{
     UIView *view = test();
     [self.view addSubview:view];
 }
-
 
 @end
 

@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import "ViewControllerOne.h"
 #import "TLDeviceInfo.h"
-//CoreTelephony.m
+#import "NSDictionary+ToString.h"
 #import <CoreTelephony/CoreTelephonyDefines.h>
 #include <dlfcn.h>
 #import <UIKit/UIKit.h>
@@ -28,11 +28,9 @@
     self.view.backgroundColor = UIColor.yellowColor;
     self.title = @"目录";
 
-    // 修改数据
-    [self editServerData];
+    // 修改数据  @"gdt", @"kuaishou", @"baidu", @"snssdk", @"yungao"
+    [self editServerDataPlatform:@"yungao" appId:@"6T750J" adslotId:@"UXR90R"];
     
-    
-
     // 激励视频：2
     // 开屏：4
     // 插屏：6
@@ -46,9 +44,9 @@
 
 - (void)editAdType:(NSInteger)type {
     NSDictionary *parame = @{
-        @"adslot_id": @"ad123457",
+        @"adslot_id": @"LVU9J65V",
         @"adtype_id": @(type),
-        @"app_id": @"ad123457"
+        @"app_id": @"LVU9J65V"
     };
 
     [self.manager POST:@"http://api.dev.uponad.cn/v1/test/modifyAdtypeId" parameters:parame progress:nil success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
@@ -58,7 +56,8 @@
     }];
 }
 
-- (void)editServerData {
+- (void)editServerDataPlatform:(NSString *)platform appId:(NSString *)appId adslotId:(NSString *)adslotId{
+    
     NSDictionary *dic = @{
         @"id": @(102),
         @"name": @"test",
@@ -76,9 +75,9 @@
                                    @"id": @(1),
                                    @"layered_id": @(1),
                                    @"platform_id": @(1),
-                                   @"platform_mark": @"gdt",
+                                   @"platform_mark": platform,
                                    @"mode": @(1),
-                                   @"cool_time": @(20),
+                                   @"cool_time": @(-1),
                                    @"sort": @(0),
                                    @"weight": @(100),
                                    @"max_impress_users": @(-1),
@@ -88,8 +87,8 @@
                                    @"impress_space": @(-1),
                                    @"platform_account_key": @[@{
                                                                   @"id": @(1),
-                                                                  @"pl_app_id": @"1105344611",
-                                                                  @"pl_adslot_id": @"8061016643928855",
+                                                                  @"pl_app_id": appId,
+                                                                  @"pl_adslot_id": adslotId,
                                                                   @"weight": @(100),
                                                                   @"max_impress_per_users": @(-1)
                                                               }
@@ -97,7 +96,7 @@
         }]
     };
 
-    NSString *dicString = [self convertToJsonData:dic];
+    NSString *dicString = [dic convertToJsonString];
 
     NSDictionary *parame = @{
         @"adslot_id": @"ad123457",
@@ -110,33 +109,6 @@
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error) {
         NSLog(@"error %@", error);
     }];
-}
-
-- (NSString *)convertToJsonData:(NSDictionary *)dict
-{
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-    NSString *jsonString;
-
-    if (!jsonData) {
-        NSLog(@"%@", error);
-    } else {
-        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-
-    NSMutableString *mutStr = [NSMutableString stringWithString:jsonString];
-
-    NSRange range = { 0, jsonString.length };
-
-    //去掉字符串中的空格
-    [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
-
-    NSRange range2 = { 0, mutStr.length };
-
-    //去掉字符串中的换行符
-    [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
-
-    return mutStr;
 }
 
 - (YGHTTPSessionManager *)manager {
